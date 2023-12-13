@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity"
+        android:background="@drawable/background2"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/score_player1"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:text="Player1: 0"
+            android:textSize="24sp"/>
+        <Button
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="RESET"
+            android:id="@+id/reset_button2"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Player 2"
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/reset_button2"
+            android:id="@+id/player1_txt2"
+            android:layout_marginTop="10dp"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/player1_txt2"
+            android:id="@+id/score2_txt1"
+
+            android:textColor="@color/white"
+            android:textSize="60dp"/>
+
+        <ImageView
+            android:id="@+id/dice_img2"
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/dice1"
+            android:layout_below="@+id/score2_txt1"
+            android:layout_centerHorizontal="true"
+            />
+        <TextView
+            android:id="@+id/current_txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dice_img2"
+            android:textColor="@color/white"
+            android:text="CURRENT"
+            android:layout_centerHorizontal="true"
+            android:textSize="30dp"
+            android:layout_marginTop="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/current_txt2"
+            android:id="@+id/currentScore2_txt"
+
+            android:textColor="@color/white"
+            android:textSize="60dp"/>
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/currentScore2_txt"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="HOLD"
+            android:id="@+id/hold_button2"
+            android:layout_centerHorizontal="true"/>
+        <Button
+            android:layout_marginTop="40dp"
+            android:layout_below="@id/hold_button2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="ROLL"
+            android:id="@+id/roll_button2"
+            android:layout_centerHorizontal="true"/>
+        <TextView
+            android:id="@+id/winner2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hold_button2"
+            android:textColor="@color/black"
+            android:text=""
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textSize="28dp"
+             />
+    </RelativeLayout>
+</layout>
