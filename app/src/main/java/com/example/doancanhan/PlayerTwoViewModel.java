@@ -18,9 +18,7 @@ public class PlayerTwoViewModel extends ViewModel {
     public int r2;
     private int saveData;
 
-    public void saveDataBeforeFinish() {
-        saveData = allScore2;
-    }
+
 
     public int getSaveData() {
         return saveData;

@@ -158,12 +158,7 @@ public class player_two extends AppCompatActivity {
 
     }
 
-//    public void sendDataBack() {
-//        Intent resultIntent = new Intent();
-//        resultIntent.putExtra("passScore",viewModel.getAllScore2());
-//        setResult(RESULT_OK, resultIntent);
-//        finish();
-//    }
+
 
     private void openActivity() {SharedPreferences preferences = getSharedPreferences("scores2", MODE_PRIVATE);
     SharedPreferences.Editor editor = preferences.edit();

@@ -178,7 +178,6 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
         Intent intent = new Intent(MainActivity.this, player_two.class);
 
-//        intent.putExtra("updatedScore",viewModel.getAllScore());
 
         startActivityForResult(intent, REQUEST_CODE_ACTIVITY2);
     }

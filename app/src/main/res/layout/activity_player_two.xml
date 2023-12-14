@@ -17,7 +17,7 @@
             android:id="@+id/score_player1"
             android:layout_marginTop="10dp"
             android:textColor="@color/white"
-            android:text="Player1: 0"
+            android:text="Player 1: "
             android:textSize="24sp"/>
         <Button
             android:layout_alignParentRight="true"
