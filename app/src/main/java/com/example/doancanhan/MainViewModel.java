@@ -25,8 +25,7 @@ public class MainViewModel extends ViewModel {
     public void createRandom() {
         rand = new Random();
         r = rand.nextInt(6) + 1;
-//                updateUI(r);
-//        updateTextView();
+
 
     }
 

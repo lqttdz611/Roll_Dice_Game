@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -22,14 +23,14 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding mainBinding;
-//    public int  currScore, allScore, scorePlayer2;
+
     TextView score,curr_score,score_player2;
     Button btnHold, btnRoll, btnReset;
     ImageView img;
     Random rand;
     int r;
     private MainViewModel viewModel;
-    private PlayerTwoViewModel viewModel2;
+
     private static final int REQUEST_CODE_ACTIVITY2 = 1;
     
 
@@ -38,12 +39,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
+
 
         mainBinding = DataBindingUtil.setContentView(this,R.layout.activity_main);
 
         viewModel = new ViewModelProvider(this).get(MainViewModel.class);
-//        viewModel2 = new ViewModelProvider(this).get(PlayerTwoViewModel.class);
+
 
 
         img = findViewById(R.id.dice_img);
@@ -57,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        currScore = allScore = scorePlayer2 =0;
 
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,17 +96,17 @@ public class MainActivity extends AppCompatActivity {
        
 
         btnHold.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SuspiciousIndentation")
             @Override
             public void onClick(View v) {
-//                allScore += currScore;
-//                currScore=0;
+
 
                 viewModel.holdFunc();
                 mainBinding.currentScoreTxt.setText(""+viewModel.getCurrScore());
                 mainBinding.score1Txt.setText(""+viewModel.getAllScore());
                 //
                 viewModel.setAllScore(Integer.parseInt(mainBinding.score1Txt.getText().toString()));
-                if(viewModel.getAllScore()>=100) {
+                if(viewModel.getAllScore()>=50) {
                     notiWiner();
                 } else
                 openActivity();
@@ -122,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == REQUEST_CODE_ACTIVITY2 && resultCode == RESULT_OK) {
             SharedPreferences preferences = getSharedPreferences("scores2", MODE_PRIVATE);
             int player2Score = preferences.getInt("player2Score", 0);
-//            int savedData = viewModel2.getSaveData();
+
             viewModel.setScorePlayer(player2Score);
 
             updateTextView();

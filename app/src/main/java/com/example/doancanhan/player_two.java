@@ -106,7 +106,7 @@ public class player_two extends AppCompatActivity {
                 mainBinding2.score2Txt1.setText(""+viewModel.getAllScore2());
 
                 viewModel.setAllScore2(Integer.parseInt(mainBinding2.score2Txt1.getText().toString()));
-                if(viewModel.getAllScore2()>=100) {
+                if(viewModel.getAllScore2()>=50) {
                     notiWiner();
                 } else
                     openActivity();
